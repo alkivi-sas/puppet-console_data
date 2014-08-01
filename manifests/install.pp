@@ -1,4 +1,10 @@
-class console_data::install () {
+class console_data::install (
+  $keymap         = $console_data::keymap,
+  $keymap_select  = $console_data::keymap_select,
+  $keymap_full    = $console_data::keymap_full,
+  $keymap_family  = $console_data::keymap_family,
+  $bootmap_md5sum = $console_data::bootmap_md5sum,
+) {
 
   if(! defined(File['/root/preseed/']))
   {
